@@ -1,0 +1,10 @@
+hosts: sa_cent
+name: upgrade all packages an centos
+  yum:
+    name: '*'
+    state: latest
+hosts: sa_ub
+  name: upgrade all packages an ubuntu
+    apt:
+      name: '*'
+      state: latest 

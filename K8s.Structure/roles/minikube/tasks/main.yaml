@@ -1,0 +1,12 @@
+---
+- name: Install on Debian 
+  include: install_Debian.yaml
+  when: ansible_os_family == 'Debian'
+
+- name: Minikube. Download minikube
+  get_url:
+    url: "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64"
+    dest: /usr/local/bin/minikube
+
+- name: Minikube. Make minikube executable 
+  shell: chmod +x /usr/local/bin/minikube

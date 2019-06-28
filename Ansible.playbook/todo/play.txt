@@ -1,0 +1,41 @@
+---
+- hosts: sa_cent 
+  vars:
+  tasks:
+  - name: Print distr version 
+    debug:
+      msg: "{{ ansible_distribution }} | {{ ansible_distribution_version }}"
+    tags:
+      - dist_version
+
+  - name: Inventory hostname
+    debug:
+      msg: "{{ inventory_hostname }} "
+    tags:
+      - info_inv
+
+  - name: Ansible hostname
+    debug:
+      msg: "{{ ansible_hostname }} "
+    tags:
+      - info_ansible
+
+  - name: Hostvars inventory hostname
+    debug:
+      msg: "Mount point  |  {{ hostvars[inventory_hostname].ansible_mounts[0]['mount'] }} |
+                            {{ hostvars[inventory_hostname].ansible_mounts[1]['mount'] }}"
+    tags:
+      - info_hostvars
+
+
+  - name: Check RAM memory 
+    debug:
+      msg: "RAM |  {{ hostvars[inventory_hostname].ansible_memory_mb['real'] }}"
+    tags:
+      - info_all
+
+  - name: SDA size
+    debug:
+      msg: "SDA size  | {{ hostvars[inventory_hostname].ansible_devices['sda']['size'] }}"
+    tags:
+      - info_device

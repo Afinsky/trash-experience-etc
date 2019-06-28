@@ -1,0 +1,21 @@
+---
+#- hosts: localhost
+#  vars:
+#    ansible_connection: local
+#    liks_to_tests:
+#      - { url: google.com, port: 80 }
+#      - { url: google.com, port: 443 }
+#  tasks:
+#  - name: Connectivity checks
+#    block:
+#      - name: Check connection
+#        wait_for:
+#          host: "{{ item.url }}"
+#          port: "{{ item.port }}"
+#          timeout: 3
+#        with_items: "{{ liks_to_tests }}" 
+
+- hosts: web_servers 
+  become: yes
+  roles:
+  - web
