@@ -1,0 +1,51 @@
+    Jenkins: ##### Waiting for secret
+    Jenkins: Generating public/private rsa key pair.
+    Jenkins: Enter file in which to save the key (/var/lib/jenkins/.ssh/id_rsa):
+    Jenkins: Enter passphrase (empty for no passphrase): Enter same passphrase again:
+    Jenkins: Created directory '/var/lib/jenkins/.ssh'.
+    Jenkins: Your identification has been saved in /var/lib/jenkins/.ssh/id_rsa.
+    Jenkins: Your public key has been saved in /var/lib/jenkins/.ssh/id_rsa.pub.
+    Jenkins: The key fingerprint is:
+    Jenkins: SHA256:c2WcfbzCk3/xgaqhkP3a4D8If5q/UGg58g9QZZ7RFDk jenkins@localhost.localdomain
+    Jenkins: The key's randomart image is:
+    Jenkins: +---[RSA 2048]----+
+    Jenkins: |         +ooo    |
+    Jenkins: |        + oE o . |
+    Jenkins: |       . o  * . o|
+    Jenkins: |      . o  o. o..|
+    Jenkins: |     o =S..  * + |
+    Jenkins: |     .B oo  . + +|
+    Jenkins: |     oo*.. .   .o|
+    Jenkins: |      ooXoo     .|
+    Jenkins: |       **Oo      |
+    Jenkins: +----[SHA256]-----+
+    Jenkins: -----BEGIN RSA PRIVATE KEY-----
+    Jenkins: MIIEowIBAAKCAQEA3Gyf5xAR+Q/0XFpqZFVwRWPlzZISwLyVvWv13NtW/G89cyPV
+    Jenkins: +z5dgd8iXAGYF1fqP3YwoTwQh6oOs8uIotkQ5MfRTMFfcH/dGMyEUcXymAgoemgd
+    Jenkins: eUAzDKesqWttw6l5WuarMu5cbcOI4of+Tjmdh+T36rJ3SyA4THy8U/aOvvBnn5V4
+    Jenkins: bSQ7gHVLtVtu8fm+LYsXSh6nJ0lMxhh2qfHpdHTGuqZH96V/UAGM9/eJFwb8jFVF
+    Jenkins: wJPSoqdwzivdx02SKcH/c5fDsj38hdrDhOgZ9/SFz0EjzFofoqnojDm0oU6qjBNS
+    Jenkins: RedgfjOLUxsgmF8AdLRwT3i1oHmM8w3dSWqHcwIDAQABAoIBAC4m6EwfB0RY3NdB
+    Jenkins: bylW4k0FH6atQRPt6IRiyHXXzxzHxdwH0tPqOPXqXG1bQBcTJ07mVkRMKUHej3mB
+    Jenkins: 0jgWrvzYAbDKhEsv2oFIwSPGCIdgnekTR6iNkqLBsNtATRk8sNYhmhLt6Zhp6o1T
+    Jenkins: 4CFM2vkLLgWMHII0WtVZAK2r4DOGCxBwItGThPHV2O+9p4cjoX9tjj50qIL6gOVz
+    Jenkins: kMHhGrBh1Bc14bG8Hs41ITWD+ZfUjihZ1Z9O8WGHpOgULrB/2VGv4mSvqZRkbZXj
+    Jenkins: qdXnUfhz2T84J0c8d9j0U0B/mtNYpOwKF4MlvMkKPVHbqdP1uJFS3mSAbdb08fyk
+    Jenkins: B7srcrECgYEA8J503z1skBhRAOnw0/ZtaV31ekRunKWftPiTGlASdn9FRfN2b24q
+    Jenkins: EdmH9oYAY1OsRILA3INVrcqomPb7UUEomhgEqfpzvB3uvrRU7k1sxqBM8Igg7G49
+    Jenkins: Na8UYg3nlbAIiiu+YcutnPsx2Qb1iZnhB3l2VaLdGAb0CjbJKOitXMcCgYEA6oOy
+    Jenkins: ujaTnbmniuemngcEzQx+7v9KWMto+GfC9aP6TaetnCVdIEu70ZDRlMELpgvskrVK
+    Jenkins: kgmhFVmsj68FcFcoetIGY9Prrtl8igEcK2EGsIP8LQHZFvRf3otxLeYIepnl97Fu
+    Jenkins: DxZ3Z6vrTWcuEMnj3N2gihnEujrO4u8zDIZKW/UCgYAw3/7dWZyzqDzL8rj4VRXk
+    Jenkins: UTGLpFrTdtD58YPv1FPrve5URx/HgpkJByaW7KEni9dyEx0ZrZO5uXCFoaVq29Fj
+    Jenkins: e313CWh4zZuxIPAfd5qgve7i7MPDQqEsRmPdhvWDcj5J0pjZRIX/XQbDDqbRTHBp
+    Jenkins: FEL1Ih/GwaLQcFBr/tc4AQKBgGFqw9vGwBtM++Qfxn7uu3fSMQhm1CN+m+RUdhBE
+    Jenkins: Rb3sYZnzi3PXAfZUCjuY1ZXsbiGjXY68oUWVMrGdKs0354DdrfnaFpVTkwBg5aq/
+    Jenkins: a1/389Feaye16/0uP52paOxE8dqqweVSl9dg+yX0LpaaxyUAi6fSfH4/36E1bCdP
+    Jenkins: waPhAoGBALha+CegAYqzDKrfujHI1SAb5RP3TzXG/+vVJqeIHs7gojm/J0Xm41nb
+    Jenkins: jxtNpYCBhHl2dR4jyYUhOMS14Pji5NFX9kE3d+WJPnM819nD9p9qijzQu/XSRu7r
+    Jenkins: 0XAUu1HAPTGlFgBt6AKfitTGg9q9CWiXXCupiVKTSnXGZ63ZKkl6
+    Jenkins: -----END RSA PRIVATE KEY-----
+    Jenkins: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcbJ/nEBH5D/RcWmpkVXBFY+XNkhLAvJW9a/Xc21b8bz1zI9X7Pl2B3yJcAZgXV+o/djChPBCHqg6zy4ii2RDkx9FMwV9wf90YzIRRxfKYCCh6aB15QDMMp6ypa23DqXla5qsy7lxtw4jih/5OOZ2H5PfqsndLIDhMfLxT9o6+8GeflXhtJDuAdUu1W27x+b4tixdKHqcnSUzGGHap8el0dMa6pkf3pX9QAYz394kXBvyMVUXAk9Kip3DOK93HTZIpwf9zl8OyPfyF2sOE6Bn39IXPQSPMWh+iqeiMObShTqqME1JF52B+M4tTGyCYXwB0tHBPeLWgeYzzDd1Jaodz jenkins@localhost.localdomain
+    Jenkins: ##### Secret here
+    Jenkins: 8ade873c3abf4e4ca94332c0fb6d9946

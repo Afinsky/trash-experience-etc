@@ -1,0 +1,59 @@
+Vagrant.configure("2") do |config|
+    config.vm.box = "ubuntu/trusty64"
+    config.vm.hostname = "first"
+    config.vm.network "public_network", ip: "192.168.1.222", bridge: "em1"
+    config.vm.provider "virtualbox" do |vb|
+       vb.gui = false
+       vb.memory = 1500
+       vb.cpus = 1
+    end
+    config.vm.provision :shell, :path => "run.sh"
+end
+
+#In current directory create ru.sh script
+
+
+
+#run.sh
+#!/bin/bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install apache2 -y
+
+
+
+vagrant halt && vagrant destroy -f - turn off in safe mode and destroy vm
+___________________________________________________________________________________________________________________________
+
+Vagrant.configure("2") do |config|
+    config.vm.box = "centos/7"
+    config.vm.define "Jenkins"
+    config.vm.network "public_network", ip: "192.168.1.200",  bridge: "em1"
+    config.vm.provision :shell, :path => "bootstrap.sh"
+end  
+
+
+#In current directory create bootstrap.sh script
+
+
+
+#!/bin/sh
+yum install java git wget -y --nogpgcheck -q
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+yum install jenkins -y --nogpgcheck -q
+usermod -s /bin/bash jenkins
+#sudo firewall-cmd --permanent --service=jenkins --add-port=8080/tcp
+#sudo firewall-cmd --reload
+systemctl enable jenkins
+systemctl start jenkins
+echo "##### Waiting for secret"
+while [ ! -f /var/lib/jenkins/secrets/initialAdminPassword ]
+do
+    sleep 2
+done
+sudo runuser -l jenkins -c 'echo -e "\n\n\n" | ssh-keygen -t rsa'
+runuser -l jenkins -c 'cat ~/.ssh/id_rsa'
+runuser -l jenkins -c 'cat ~/.ssh/id_rsa.pub'
+
+echo "##### Secret here"
+cat /var/lib/jenkins/secrets/initialAdminPassword

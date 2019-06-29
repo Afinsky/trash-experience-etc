@@ -1,0 +1,39 @@
+$script = <<-SCRIPT
+sudo su vagrant -c 'cat /tmp/authorized_keys >> /home/vagrant/.ssh/authorized_keys'
+chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys 
+chmod 600 /home/vagrant/.ssh/authorized_keys
+rm -f /tmp/authorized_keys
+echo "Client done!"
+SCRIPT
+
+
+Vagrant.configure("2") do |config|
+	    config.vm.box = "bento/ubuntu-16.04"
+		config.ssh.insert_key = false
+            config.vm.define "minikube"
+	    config.vm.network "public_network", ip: "192.168.0.241"
+		config.vm.network "forwarded_port",
+            guest: 30000,
+            host:  30000,
+        auto_correct: true
+
+        config.vm.network "forwarded_port",
+            guest: 80,
+            host:  80,
+        auto_correct: true
+
+        config.vm.network "forwarded_port",
+            guest: 443,
+            host:  443,
+        auto_correct: true
+            config.vm.provision "file",
+	       source: "authorized_keys",
+	       destination: "/tmp/authorized_keys"
+	    config.vm.provision "shell",
+	       inline: $script
+	    config.vm.provider "virtualbox" do |vb|
+           vb.memory = "4096"
+           vb.cpus = "4"
+		end
+	
+end
